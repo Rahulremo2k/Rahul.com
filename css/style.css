@@ -222,6 +222,9 @@ nav ul li.btm.hide i:before{
   #home{
     height: 100vh;
   }
+  .head-container {
+    padding: 0 1rem;
+  }
   .head-h1 {
     padding-top: 0px;
     padding-left:50px;
