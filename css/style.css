@@ -208,7 +208,11 @@ nav ul li.btm.hide i:before{
     font-size: 50px;
   }
 }
-
+@media(max-width:1200px){
+  q{
+    font-size: 50px;
+  }
+}
 @media(max-width: 800px) {
   #home{
     height: 100%;
@@ -329,6 +333,7 @@ q{
   font-family: 'Cinzel', serif;
   font-weight: 200;
 }
+
 .quotes-m{
   display: none;
   text-align: center;
@@ -340,9 +345,8 @@ q{
   padding-top: 20px;
 }
 @media only screen 
-  and (max-device-width : 667px) 
-  and (orientation : portrait) 
-  and (-webkit-min-device-pixel-ratio : 2)
+    and (max-device-width : 700px) 
+    and (-webkit-min-device-pixel-ratio : 2)
 {
   .quotes-m{
       display: inline-block;
