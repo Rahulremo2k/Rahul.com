@@ -82,7 +82,7 @@ nav ul li.btm.hide i:before{
   content: '\f00d';
 }
 
-@media all and (max-width: 1000px){
+@media all and (max-width: 1100px){
   nav{
     position: relative;
     width: 100%;
@@ -204,6 +204,9 @@ nav ul li.btm.hide i:before{
   .head-h1 {
     font-size: 5rem;
   }
+  q{
+    font-size: 50px;
+  }
 }
 
 @media(max-width: 800px) {
@@ -216,6 +219,9 @@ nav ul li.btm.hide i:before{
 
   .head-h1 {
     font-size: 3rem;
+  }
+  q{
+    font-size: 2.5rem;
   }
 }
 
@@ -233,6 +239,9 @@ nav ul li.btm.hide i:before{
    margin-top: -20px;
    padding-left: 50px;
     font-size: 1.5rem;
+  }
+  q{
+    font-size: 2rem;
   }
   
 }
@@ -316,7 +325,33 @@ nav ul li.btm.hide i:before{
           transform: translateY(0) scale(1,1);
 }
 
+q{
+  font-family: 'Cinzel', serif;
+  font-weight: 200;
+}
+.quotes-m{
+  display: none;
+  text-align: center;
+  padding-top: 20px;
+}
+.quotes-pc{
+  display: inline-block;
+  text-align: center;
+  padding-top: 20px;
+}
+@media only screen 
+  and (max-device-width : 667px) 
+  and (orientation : portrait) 
+  and (-webkit-min-device-pixel-ratio : 2)
+{
+  .quotes-m{
+      display: inline-block;
+  }
 
+  .quotes-pc{
+      display: none;
+  }
+}
 
           /* *********************************** */
 
