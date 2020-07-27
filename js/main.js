@@ -36,7 +36,17 @@ var mybutton = document.getElementById("myBtn");
       $('ul li').toggleClass("hide");
     });
   });
-
+ //nav sticky
+ const nav = document.querySelector('nav');
+ window.addEventListener('scroll', fixNav);
+ function fixNav(){
+   if(window.scrollY > nav.offsetHeight+150){
+       nav.classList.add('black');
+   }
+   else{
+       nav.classList.remove('black');
+   }
+ }
 
 // home typewriter
 

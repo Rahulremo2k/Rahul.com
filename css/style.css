@@ -6,20 +6,28 @@
   box-sizing: border-box;
   font-family: 'Montserrat',sans-serif;
 }
-body{
-  background-image: radial-gradient(circle at center center, rgba(217, 217, 217,0.05) 0%, rgba(217, 217, 217,0.05) 15%,rgba(197, 197, 197,0.05) 15%, rgba(197, 197, 197,0.05) 34%,rgba(178, 178, 178,0.05) 34%, rgba(178, 178, 178,0.05) 51%,rgba(237, 237, 237,0.05) 51%, rgba(237, 237, 237,0.05) 75%,rgba(138, 138, 138,0.05) 75%, rgba(138, 138, 138,0.05) 89%,rgba(158, 158, 158,0.05) 89%, rgba(158, 158, 158,0.05) 100%),radial-gradient(circle at center center, rgb(255,255,255) 0%, rgb(255,255,255) 6%,rgb(255,255,255) 6%, rgb(255,255,255) 12%,rgb(255,255,255) 12%, rgb(255,255,255) 31%,rgb(255,255,255) 31%, rgb(255,255,255) 92%,rgb(255,255,255) 92%, rgb(255,255,255) 97%,rgb(255,255,255) 97%, rgb(255,255,255) 100%); background-size: 42px 42px;
-}
 html {
   scroll-behavior: smooth;
 }
+
+
 /* navbar */
 nav{
   position: fixed;
   width: 100%;
-  background: #151515;
-  padding: 5px 40px;
+  padding: 1px 40px;
   z-index: 1001;
 }
+nav.black{
+  background-color: black;
+}
+nav.black ul li.logo{
+  color: white;
+}
+nav.black ul li a{
+  color: white;
+}
+
 
 nav ul{
   list-style: none;
@@ -56,7 +64,7 @@ nav ul li.items:hover:after{
 }
 nav ul li.logo{
   flex: 1;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 23px;
   font-weight: 600;
   padding: 0 140px;
@@ -64,7 +72,7 @@ nav ul li.logo{
   user-select: none;
 }
 nav ul li a{
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 18px;
   text-decoration: none;
   transition: .4s;
@@ -86,11 +94,16 @@ nav ul li.btm.hide i:before{
   nav{
     position: relative;
     width: 100%;
-    padding: 5px 30px;
+    padding: 1px 20px;
+    background: #151515;
+    
   }
   nav ul li.logo{
-   color:white;
+   color:rgb(255, 255, 255);
    padding: 5px;
+  }
+  nav ul li a{
+    color: white;
   }
   nav ul li.items{
     position: relative;
@@ -117,6 +130,7 @@ nav ul li.btm.hide i:before{
     display: none;
   }
 }
+
 /* scroll button */
 
 #myBtn {
@@ -161,8 +175,9 @@ nav ul li.btm.hide i:before{
 
 /* home */
 #home{
-   height:100vh;
-   background-position: center;
+
+     height:100vh;
+    background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,24 +191,29 @@ nav ul li.btm.hide i:before{
 }
 
 .head-h1 {
+  font-family: 'Cinzel', serif;
   padding: 140px 100px;
   font-weight: 200;
   margin: 0.4rem;
-  font-family: 'Cinzel', serif;
+}
+.head-h2{
+  padding-left: 100px;
+  font-weight: 200;
+  
+}
+
+.head-h1 {
   font-size: 3.5rem;
 }
 
 .head-h2 {
-  padding-left: 100px;
-  font-weight: 200;
-  
   font-size: 2rem;
-  color: rgb(59, 59, 59);
+  color: rgb(31, 29, 29);
 }
 
 /* Cursor */
 .txt-type > .txt {
-  border-right: 0.2rem solid #777;
+  border-right: 0.2rem solid rgb(44, 43, 43);
   font-family: 'Cinzel', serif;
 }
 
@@ -228,7 +248,7 @@ nav ul li.btm.hide i:before{
 
 @media(max-width: 500px) {
   #home{
-    height: 100vh;
+    height: 100%;
   }
   .head-h1 {
     padding-top: 0px;
@@ -353,6 +373,7 @@ q{
       display: none;
   }
 }
+
 
           /* *********************************** */
 
