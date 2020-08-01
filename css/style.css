@@ -64,6 +64,7 @@ nav ul li.items:hover:after{
   bottom: 8px;
 }
 nav ul li.logo{
+  font-family: 'Ceviche One', cursive;
   flex: 1;
   color: rgb(0, 0, 0);
   font-size: 23px;
@@ -401,11 +402,11 @@ q{
 }
 
 .about-container>img {
-  border: 3px solid #000000;
-  height: 240px;
+  border-radius: 50%;
+  height: 290px;
   margin-bottom: 10px;
   position: relative;
-  width: 240px;
+  width: 300px;
   z-index: 5;
 }
 
