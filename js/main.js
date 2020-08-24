@@ -2,7 +2,7 @@
 
 $(window).on('load', function () {
   if ($('#preloader').length) {
-    $('#preloader').delay(800).fadeOut('slow', function () {
+    $('#preloader').delay(500).fadeOut('slow', function () {
       $(this).remove();
     });
   }
@@ -97,7 +97,7 @@ class TypeWriter {
       // Move to next word
       this.wordIndex++;
       // Pause before start typing
-      typeSpeed = 500;
+      typeSpeed = 300;
     }
 
     setTimeout(() => this.type(), typeSpeed);
@@ -115,4 +115,18 @@ function init() {
   const wait = txtElement.getAttribute('data-wait');
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
+}
+
+
+//home mobile type writer
+// Init On DOM Load
+document.addEventListener('DOMContentLoaded', init1);
+
+// Init App
+function init1() {
+  const txtElement1 = document.querySelector('.txt-type1');
+  const words1 = JSON.parse(txtElement1.getAttribute('data-words'));
+  const wait1 = txtElement1.getAttribute('data-wait');
+  // Init TypeWriter
+  new TypeWriter(txtElement1, words1, wait1);
 }
