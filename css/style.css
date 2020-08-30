@@ -249,6 +249,12 @@ nav ul li.btm.hide i:before{
   q{
     font-size: 50px;
   }
+  .head-h1{
+    display: inline;
+  }
+  .had-h1{
+    display: none;
+  }
 }
 @media(max-width: 800px) {
   #home{
