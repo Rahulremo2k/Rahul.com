@@ -416,7 +416,7 @@ q{
 
 /* About */
 #about{
-  height: 100%;
+  height: 100vh;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -497,7 +497,10 @@ q{
 }
 
 @media only screen and (max-width: 767px) {
-  .a-t{
+#about{
+  height: 100%;
+    }
+.a-t{
     padding-top: 10%;
   }
   .a-c{
