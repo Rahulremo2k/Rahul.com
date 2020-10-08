@@ -1,5 +1,4 @@
 // preloader
-
 $(window).on('load', function () {
   if ($('#preloader').length) {
     $('#preloader').delay(500).fadeOut('slow', function () {
@@ -9,9 +8,9 @@ $(window).on('load', function () {
 });
 
 
+
 // scroll Button
-  window.onscroll = function() {scrollFunction()};
-  
+window.onscroll = function() {scrollFunction()};
 var mybutton = document.getElementById("myBtn");
 
   function scrollFunction() {
@@ -28,14 +27,18 @@ var mybutton = document.getElementById("myBtn");
     document.documentElement.scrollTop = 0;
   }
 
-  // Navbar @media
 
+
+
+  // Navbar @media
   $(document).ready(function(){
     $('.btm').click(function(){
       $('.items').toggleClass("show");
       $('ul li').toggleClass("hide");
     });
   });
+
+
  //nav sticky
  const nav = document.querySelector('nav');
  window.addEventListener('scroll', fixNav);
@@ -48,8 +51,47 @@ var mybutton = document.getElementById("myBtn");
    }
  }
 
-// home typewriter
 
+ //navbar active
+$(document).ready(function () {
+  //Smooth scrolling when click to nav
+  $('nav > ul > li > a').click(function (e) {
+      e.preventDefault();
+      var curLink = $(this);
+      var scrollPoint = $(curLink.attr('href')).position().top+10;
+      $('body,html').animate({
+          scrollTop: scrollPoint
+      }, 10);
+  })
+
+  $(window).scroll(function () {
+      onScrollHandle();
+  });
+
+  function onScrollHandle() {
+
+      //Get current scroll position
+      var currentScrollPos = $(document).scrollTop();
+
+      //Iterate through all node
+      $('nav > ul > li > a').each(function () {
+          var curLink = $(this);
+          var refElem = $(curLink.attr('href'));
+          //Compare the value of current position and the every section position in each scroll
+          if (refElem.position().top <= currentScrollPos && refElem.position().top + refElem.height() > currentScrollPos) {
+              //Remove class active in all nav
+              $('nav > ul > li').removeClass("active");
+              //Add class active
+              curLink.parent().addClass("active");
+          }
+          else {
+              curLink.parent().removeClass("active");
+          }
+      });
+  }
+});
+
+// home typewriter
 class TypeWriter {
   constructor(txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
@@ -103,8 +145,6 @@ class TypeWriter {
     setTimeout(() => this.type(), typeSpeed);
   }
 }
-
-
 // Init On DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
@@ -116,8 +156,6 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
-
-
 //home mobile type writer
 // Init On DOM Load
 document.addEventListener('DOMContentLoaded', init1);
