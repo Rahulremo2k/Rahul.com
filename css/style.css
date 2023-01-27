@@ -443,7 +443,7 @@ q{
 }
 
 .about-container>img {
-  border-radius: 50%;
+  border-radius: 60%;
   height: 290px;
   margin-bottom: 10px;
   position: relative;
@@ -838,7 +838,7 @@ q{
 
 /* form */
 #c-t{
-  padding-top: 5%;
+  padding-top: 8%;
   text-align: center;
   text-transform: uppercase;
   color: #000;
